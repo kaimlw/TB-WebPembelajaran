@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* MAIN CONTENT */
+.container{
+    background-color: #91c788;
+}
+.main-content-1{
+    display: flex;
+    height: 500px;
+    align-items: center;
+    padding: 50px;
+}
+
+h1,h3{
+    font-family: 'Oswald',sans-serif;
+    font-weight: 600;
+}
+
+p{
+    font-family: 'Roboto',sans-serif;
+}
+
+.com{
+    width: 50%;
+    padding: 30px;
+}
+
+.ilustrasi{
+    display: flex;
+    width: 50%;
+    padding: 30px;
+    justify-content: center;
+
+}
+.ilustrasi img{
+    background-color: violet;
+    height: 200px;
+    width: 200px;
+}

@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* MAIN CONTENT */
+.container{
+    /* background-color: #feffde; */
+    background-color: #91c788;
+
+}
+
+.main-content{
+    display: flex;
+    width: 100%;
+    height: 500px;
+    align-items: center;
+}
+
+.judulMateri{
+    width: 50%;
+    padding-right: 100px ;
+}
+
+h1,h3{
+    font-family: 'Oswald',sans-serif;
+    font-weight: 600;
+}
+
+p{
+    font-family: 'Roboto',sans-serif;
+}
+.illmateri{
+    width: 50%;
+    padding-left: 200px ;
+}
+.illmateri img{
+    width: 300px;
+    height: 300px;
+}
+
+/* ---Accordion */
+.daftarMateri{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: #79a870;
+    border-radius: 30px;
+}
+
+.daftarMateri h3{
+    text-align: center;
+}
+.accordion{
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.accordion .main-Materi{
+    position: relative;
+    margin: 10px 20px;
+}
+
+.accordion .main-Materi .label{
+    position: relative;
+    padding: 10px ;
+    background: cadetblue;
+    color: chartreuse;
+    cursor: pointer;
+}
+
+.accordion .main-Materi .label::before{
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+}
+
+.accordion .main-Materi.active .label::before{
+   content: '-'; 
+}   
+
+.accordion .main-Materi .content{
+    position: relative;
+    background: coral;
+    padding: 0 15px;
+    height: 0;
+    overflow: hidden;
+    transition: 0.2s;
+    overflow-y: auto;
+}
+
+.accordion .main-Materi.active .content{
+    height: max-content; 
+    padding: 10px;
+}
