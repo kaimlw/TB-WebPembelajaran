@@ -5,16 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontak</title>
+    <link rel="stylesheet" href="style/navbar.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/Kontak.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Roboto:wght400;700&display=swap" rel="stylesheet">    
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <style>
+
+    </style>
 </head>
 <body>
     <div class="container">
         <div class="navbar">
             <ul class="nav">
-                <li><a href=""><img src="" alt=""></a></li>
-                <li><a href="Materi">Materi</a></li>
-                <li><a href="About">Tentang Kami</a></li>
-                <li><a href="Kontak">Kontak</a></li>
-                <li><a href="Masuk">Masuk</a></li>
+                <div class="logo-header">
+                    <li><a href=""><img src="img/Logo2-5.png" alt=""></a></li>
+                </div>
+                <div class="navi">
+                    <li><a href="Materi">MATERI</a></li>
+                    <li><a href="About">TENTANG KAMI</a></li>
+                    <li><a href="Kontak">KONTAK</a></li>
+                    <li id="masuk"><a href="Masuk">MASUK</a></li>    
+                </div>
             </ul>
         </div>
         <div class="kontak">
@@ -30,54 +43,62 @@
             </div>
             <p>atau isi formulir di samping</p>
         </div>
-        <div class="form">
+        <table>
             <form action="">
-                <div class=" formNama">
-                    <p>Nama</p>
+                <tr><th>
+                    <span>Nama</span><br>
                     <input type="text" name="Nama" id="">
-                </div>
-                <div class="formEmail">
-                    <p>Email</p>
+                </tr>
+                <tr><th>
+                    <span>Email</span><br>
                     <input type="text" name="Email" id="">
-                </div>
-                <div class="telepon">
-                    <p>No.handphone</p>
+                </tr>
+                <tr><th>
+                    <span>No.handphone</span><br>
                     <input type="number" name="" id="">
-                </div>
-                <div class="pesan">
-                    <p>Pesan</p>
+                </tr>
+                <tr><th>
+                    <span>Pesan</p>
                     <textarea name="" id="" cols="30" rows="10"></textarea>
-                </div>
+                </tr>
+                <tr><th>
                 <div class="button">
                     <button>Kirim</button>    
                 </div>
+                </tr>
             </form>
-        </div>
+        </table>
         <div class="footer">
-            <div class="materi">
-                <h3>Materi</h3>
-                <a href="photoshop">Photoshop</a>
-                <a href="illustrator">Illustrator</a>
-                <a href="figma">FIGMA</a>
+            <div class="isi-footer">
+                <div class="materi">
+                    <h3>Materi</h3>
+                    <a href="photoshop">Photoshop</a>
+                    <a href="illustrator">Illustrator</a>
+                    <a href="figma">FIGMA</a>
+                </div>
+                <div class="about">
+                    <h3>Tentang Kami</h3>
+                    <a href="About us">About Us</a>
+                    <a href="Testimonial">Testimonial</a>
+                </div>
+                <div class="kontak">
+                    <h3>Hubungi Kami</h3>
+                    <a href="email">Email</a>
+                    <a href="telepon">Telepon</a>
+                </div>
+                <div class="media">
+                    <h3>Sosial Media</h3>
+                    <div class="icon">
+                        <a href="ig" id="ig"><span class="iconify" data-icon="akar-icons:instagram-fill" data-inline="false"></span><br></a>
+                        <a href="fb" id="fb"><span class="iconify" data-icon="akar-icons:facebook-fill" data-inline="false"></span><br></a>
+                        <a href="twit" id="tw"><span class="iconify" data-icon="whh:circletwitter" data-inline="false"></span><br></a>    
+                    </div>
+                </div> 
             </div>
-            <div class="About">
-                <h3>Tentang Kami</h3>
-                <a href="About us">About Us</a>
-                <a href="Testimonial">Testimonial</a>
-            </div>
-            <div class="kontak">
-                <h3>Hubungi Kami</h3>
-                <a href="email">Email</a>
-                <a href="telepon">Telepon</a>
-            </div>
-            <div class="media">
-                <h3>Sosial Media</h3>
-                <a href="ig"><img src="" alt=""></a>
-                <a href="fb"><img src="" alt=""></a>
-                <a href="twit"><img src="" alt=""></a>
-            </div>
-            <div class="logo">
-                <a href=""><img src="" alt=""></a></li>
+            <div class="logo-footer">
+                <a href=""><img src="img/Logo2-5.png" alt=""></a>
+            </div>   
+        </div>
             </div>
         </div>
     </div>
