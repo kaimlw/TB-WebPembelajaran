@@ -50,19 +50,51 @@
         </div>
         <div class="testimoni">
             <h1>Testimoni</h1>
-            <div class="testi1">
-                <div>
-                    <img src="" alt="">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur qui optio et dicta voluptates vero delectus ut quam fugiat. Beatae excepturi deserunt quas facilis accusamus reiciendis, vel assumenda molestias culpa.</p>
+            <div class="slider">
+                <div class="slides">
+                    <!-- Radio Button Start -->
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+                    <!-- Radio Button End -->
+
+                    <!-- Slide Content Start -->
+                    <div class="slide first">
+                        <img src="img/logo1.png" alt="">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur qui optio et dicta voluptates vero delectus ut quam fugiat. Beatae excepturi deserunt quas facilis accusamus reiciendis, vel assumenda molestias culpa.</p>
+                    </div>
+                    <div class="slide">
+                        <img src="img/logo1.png" alt="">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptatem impedit quasi qui, delectus omnis tenetur quae ullam, eaque vel quibusdam hic quia nihil molestias consequatur earum fuga quam praesentium?</p>
+                    </div>
+                    <div class="slide">
+                        <img src="img/logo1.png" alt="">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae velit veniam neque nam, odit quo eos, commodi eius nostrum non saepe incidunt soluta, quisquam sit officiis. Sunt asperiores nobis odio.</p>
+                    </div>
+                    <div class="slide">
+                        <img src="img/logo1.png" alt="">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae velit veniam neque nam, odit quo eos, commodi eius nostrum non saepe incidunt soluta, quisquam sit officiis. Sunt asperiores nobis odio.</p>
+                    </div>
+                    <!-- Slide Content End -->
+
+                    <!-- Automatic Navigation Start -->
+                    <div class="nav-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                    </div>
+                    <!-- Automatic Navigation End -->
                 </div>
-                <div class="testi2">
-                    <img src="" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptatem impedit quasi qui, delectus omnis tenetur quae ullam, eaque vel quibusdam hic quia nihil molestias consequatur earum fuga quam praesentium?</p>
+                <!-- Manual Navigation Start -->
+                <div class="nav-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
                 </div>
-                <div class="testi3">
-                    <img src="" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae velit veniam neque nam, odit quo eos, commodi eius nostrum non saepe incidunt soluta, quisquam sit officiis. Sunt asperiores nobis odio.</p>
-                </div>
+                <!-- Manual Navigation Start -->
             </div>
         </div>
         <div class="footer">
@@ -97,5 +129,15 @@
             </div>   
         </div>
     </div>
+    <script>
+        var counter= 1;
+        setInterval(function () {
+            document.getElementById('radio'+ counter).checked=true;
+            counter++;
+            if (counter>4) {
+                counter=1
+            }
+        },5000)
+    </script>
 </body>
 </html>
