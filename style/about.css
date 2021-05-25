@@ -1,0 +1,69 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+.container{
+  background-color:#91c788;
+}
+.company{
+  background-color:#91c788;
+  float: left;
+  width:100%;
+  padding:20px;
+}
+.com {
+  width:50%;
+  margin:50px;
+  float: left;
+}
+.ilcomp img {
+  float: right;
+  margin-right: 130px;
+  margin-top: 50px;
+  width:100 px;
+  height:200px;
+}
+
+.visi{
+  background-color:#91c788;
+  float: left;
+  width:100%;
+  padding:20px;
+}
+.ilvisi img {
+  float: left;
+  margin-left: 150px;
+  margin-top: 50px;
+  width:100 px;
+  height:200px;
+}
+.vis {
+  width:50%;
+  margin:50px;
+  float: right;
+}
+.misi{
+  width:100%;
+  height:100%;
+  padding:20px;
+  margin-bottom: 50px;
+}
+.mis {
+  width:50%;
+  margin-top: 80px;
+  margin-left: 50px;
+  float: left;
+}
+.ilmisi img {
+  float: right;
+  margin-top: 80px;
+  margin-bottom:50px;
+  margin-right:130px;
+  width:100 px;
+  height:200px;
+}
+p{
+  text-align: justify;
+}
+  
