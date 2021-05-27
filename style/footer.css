@@ -1,11 +1,12 @@
+.container-footer{
+    background-color: green;
+    padding-top: 7px;
+}
 .footer{
     display: flex;
     height: 180px;
     width: 100%;
     background-color: #393232;
-    color: white;
-    box-shadow: 0px -7px green;
-    margin-top: 50px;
 }
 .materi,.about,.kontak{
     display: flex;
@@ -18,10 +19,18 @@
     padding: 20px 0px 0px 30px;
 
 }
+.isi-footer h3{
+    font-family: 'Roboto',sans-serif;
+    color: white;
+}
 
 .isi-footer a{
     color: #91c788;
     text-decoration: none;
+    font-family: 'Noto Sans JP',sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 2px 0;
 }
 
 .media{

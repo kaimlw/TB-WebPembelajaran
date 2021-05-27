@@ -41,7 +41,32 @@ p{
     height: 200px;
     width: 200px;
 }
+/* MATERI */
+.content{
+    margin-bottom: 50px;
+}
+.isi-Content{
+    display: flex;
+    justify-content: center;
+}
+.content h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
 
+.photoshop,.illustrator,.figma{
+    border: 2px solid white;
+    background: #29bb89;
+    border-radius: 20px;
+    width: 250px;
+    height: 238px;
+    margin-right: 20px;
+}
+
+.logo-photoshop .iconify{
+    width: 80px;
+    height: 80px;
+} 
 /* SLIDER */
 .testimoni{
     height: 250px;
@@ -50,7 +75,7 @@ p{
     text-align: center;
 }
 .slider{
-    margin-left: 25%;
+    margin-left: 26%;
     width: 600px;
     height: 300px;
     overflow: hidden;
