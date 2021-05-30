@@ -5,26 +5,78 @@
 }
 
 .container{
+
     /* background-color: #feffde; */
     background-color: #91c788;
 }
 
-.kontak {
-    color: #333,
-    font-family: Roboto,
-    font-weight: Bold,
-    font-size: 48px,
-    opacity: 1
+
+.mainContent {
+    display: flex;
 }
 
+.formulir{
+    width: 50%;
+}
 table{
-    text-align: left;
     background: #feffde;
     width: 300px;
+    margin: 70px 0 0 -50px;
     left: 705px;
-    top: -30px;
-    border-radius: 0px;
-    align: right;
-    position: relative; 
+    font-family: 'Roboto',sans-serif;
 }
 
+.kami{      
+    width: 50%;
+    height: 500px;
+    margin: 90px 0 0 200px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+}
+
+.kami h3{
+    font-size: 28px;
+    line-height: 60px;
+}
+
+.kami p{
+    font-size:15px;
+}
+
+.logo{
+    line-height: 30px;
+}
+
+.logo-email-kami{
+    display: flex;
+}
+.logo-email-kami img{
+    position: absolute;
+    left: 1.5%;
+    right: 1.5%;
+    top: 2.08%;
+    bottom: 5%;
+}
+.logo-tel-kami{
+    display: flex;
+}
+
+.logo-tel-kami{
+    position: absolute;
+    left: 1.33%;
+    right: 1.33%;
+    top: 1.33%;
+    bottom: 1.33%;
+}
+.area {
+    text-align: left;
+}
+button{
+    text-align: center;
+    width: 111px;
+    height: 40px;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:bold;
+    }
