@@ -36,7 +36,18 @@ li{
     border-radius: 30px;
 }
 
+
 .navi li a{
     color:black;
     text-decoration: none;
 }
+
+.navi li a:hover{
+    color: #29bb89;
+}
+#masuk:hover,#masuk a:hover{
+    background-color: #29bb89;
+    color: white;
+}
+
+

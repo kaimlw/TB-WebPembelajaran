@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Isi Materi</title>
     <link rel="stylesheet" href="style/navbar.css">
     <link rel="stylesheet" href="style/footer.css">
-    <link rel="stylesheet" href="style/Materi-style.css">
+    <link rel="stylesheet" href="style/IsiMateri-style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"> 
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
@@ -28,51 +28,37 @@
             </ul>
         </div>
         
-        <div class="main-content">
-            <div class="illmateri">
+        <div class="mainContent">
+            <div class="navigation">
+                <div class="pilihan">
+                    <h3>Daftar Materi</h3>
+                    <ul>
+                        <li><a href="">Materi 1</a></li>
+                        <li><a href="">Materi 2</a></li>
+                        <li><a href="">Materi 3</a></li>
+                        <li><a href="">Materi 4</a></li>
+                        <li><a href="">Materi 5</a></li>
+                        <li><a href="">Materi 6</a></li>
+                        <li><a href="">Materi 7</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="content">
+                <h1>Judul Materi</h1>
                 <img src="img/logo1.png" alt="">
-            </div>
-            <div class="judulMateri">
-                <h1>PHOTOSHOP</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione asperiores quod itaque mollitia soluta minus, velit delectus beatae ullam, tempore molestias? Nam cupiditate, esse neque itaque illo doloremque quas quae?</p>
-            </div>    
-        </div>
+    
+                <div class="isi-materi">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem tempore aut esse numquam quidem, ipsum magni quasi dolor incidunt laudantium ex, iusto nemo cumque deserunt repellendus inventore. Consequatur, perferendis fuga!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem tempore aut esse numquam quidem, ipsum magni quasi dolor incidunt laudantium ex, iusto nemo cumque deserunt repellendus inventore. Consequatur, perferendis fuga!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem tempore aut esse numquam quidem, ipsum magni quasi dolor incidunt laudantium ex, iusto nemo cumque deserunt repellendus inventore. Consequatur, perferendis fuga!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem tempore aut esse numquam quidem, ipsum magni quasi dolor incidunt laudantium ex, iusto nemo cumque deserunt repellendus inventore. Consequatur, perferendis fuga!</p>
+                </div>
 
-        <div class="daftarMateri">
-            <h3>DAFTAR MATERI</h3>
-            <div class="accordion">
-                <div class="main-Materi">
-                    <div class="label">Materi 1</div>
-                    <div class="content">
-                        <ul>
-                            <li><a href="IsiMateri.html">Isi-Materi 1</a></li>
-                            <li><a href="IsiMateri.html">Isi-Materi 2</a></li>
-                            <li><a href="IsiMateri.html">Isi-Materi 3</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="main-Materi">
-                    <div class="label">Materi 2</div>
-                    <div class="content">
-                        <ul>
-                            <li><a href="IsiMateri.html">Isi-Materi 1</a></li>
-                            <li><a href="IsiMateri.html">Isi-Materi 2</a></li>
-                            <li><a href="IsiMateri.html">Isi-Materi 3</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="main-Materi">
-                    <div class="label">Materi 3</div>
-                    <div class="content">
-                        <ul>
-                            <li><a href="IsiMateri.html">Isi-Materi 1</a></li>
-                            <li><a href="IsiMateri.html">Isi-Materi 2</a></li>
-                            <li><a href="IsiMateri.html">Isi-Materi 3</a></li>
-                        </ul>
-                    </div>
+                <div class="video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/p4ga7qXqiIo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
+        
         <div class="container-footer">
             <div class="footer">
                 <div class="isi-footer">
@@ -106,16 +92,7 @@
                 </div>   
             </div>
         </div>
+        
     </div>
-    <script>
-        const accordion= document.getElementsByClassName('main-Materi');
-
-        for (let i = 0; i < accordion.length; i++) {
-            accordion[i].addEventListener('click',function() {
-                this.classList.toggle('active');
-            })
-            
-        }
-    </script>
 </body>
 </html>

@@ -13,9 +13,10 @@
     height: 500px;
     align-items: center;
     padding: 50px;
+    margin-left: 10%;
 }
 
-h1,h3{
+h1,h3,h4{
     font-family: 'Oswald',sans-serif;
     font-weight: 600;
 }
@@ -41,7 +42,58 @@ p{
     height: 200px;
     width: 200px;
 }
+/* MATERI */
+.content{
+    margin-bottom: 50px;
+}
+.isi-Content{
+    display: flex;
+    justify-content: center;
+}
+.content h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
 
+.photoshop,.illustrator,.figma{
+    border: 2px solid white;
+    background: #29bb89;
+    border-radius: 20px;
+    width: 250px;
+    height: 238px;
+    margin-right: 20px;
+    color: white;
+}
+.logo-photoshop{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.tulisan{
+    display: flex;
+    flex-direction: row;
+    height: 85px;
+    margin-left: 15px;
+    margin-top: 50px;
+}
+.tulisan h4{
+    margin-right: 60px;
+}
+.tulisan a{
+    text-decoration: none;
+    color: black;
+}
+.tulisan .iconify{
+    color: black;
+}
+
+.logo-photoshop .iconify{
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+} 
 /* SLIDER */
 .testimoni{
     height: 250px;
@@ -50,7 +102,7 @@ p{
     text-align: center;
 }
 .slider{
-    margin-left: 25%;
+    margin-left: 26%;
     width: 600px;
     height: 300px;
     overflow: hidden;
@@ -70,8 +122,10 @@ p{
     width: 20%;
     height: 150px;
     border: 3px solid white;
+    background: #29bb89;
     margin-right: 5px;
     transition: 2s;
+    padding: 10px;
 }
 .slides img{
     width: 100px;
@@ -82,7 +136,7 @@ p{
 /* ---Manual Nav */
 .nav-manual{
     position: absolute;
-    width: 635px;
+    width: 600px;
     margin-top: 5px;
     display: flex;
     justify-content: center;
@@ -122,7 +176,7 @@ p{
 .nav-auto{
     position: absolute;
     display: flex;
-    width: 635px;
+    width: 600px;
     justify-content: center;
     margin-top: 185px;
 }
