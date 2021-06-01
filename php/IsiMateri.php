@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-
+<?php
+    include ('../db/koneksi.php');
+    session_start();
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daftar</title>
+    <title>Isi Materi</title>
     <link rel="stylesheet" href="../style/navbar.css">
     <link rel="stylesheet" href="../style/footer.css">
-    <link rel="stylesheet" href="style/pendaftaran.css">
+    <link rel="stylesheet" href="../style/IsiMateri-style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"> 
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
@@ -35,45 +38,63 @@
                 </div>
             </ul>
         </div>
+        
+        <div class="mainContent">
+            <div class="navigation">
+                <div class="pilihan">
+                    <h3>Daftar Materi</h3>
+                    <?php 
+                        $id=$_GET['id_materi'];
+                        $bagian=$_GET['id_bagian'];
+                        $no=$_GET['no'];
 
-        <div class="content">
-            <div class="isi-content">
-                <div class="illdaftar">
-                    <img src="../img/login.jpg" alt="">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, a sed possimus dolorem non consequuntur quia consectetur eos repellat rem repudiandae eius aliquid id ea magnam dolores explicabo quasi. Accusamus.</p>
+                        $cari= "SELECT * FROM materi,isi_materi WHERE materi.id_materi = '$id' AND materi.id_materi=isi_materi.id_materi";
+                        $tampil= mysqli_query($koneksi,$cari);
+                        while ($data= mysqli_fetch_assoc($tampil)) {
+                            $db_bagian=$data['id_bagian'];?>
+                            <ul>
+                                <li><h3><?php echo $data['id_bagian'] ?></h3></li>
+                                <?php
+                                    $tampil= mysqli_query($koneksi,$cari); 
+                                    while ($data= mysqli_fetch_assoc($tampil)) {
+                                        if ($db_bagian==$data['id_bagian']) {
+                                            echo "<li><a href='IsiMateri.php?id_materi=".$data['id_materi']."&&id_bagian=".$data['id_bagian']."&& no=".$data['no']."'>".$data['judul_isi'] ."</a></li>";
+                                        }else {
+                                            $db_bagian=$data['id_bagian'];
+                                            echo "</ul><ul>
+                                            <li><h3>".$data['id_bagian']."</h3></li>
+                                            <li><a href='IsiMateri.php?id_materi=".$data['id_materi']."&&id_bagian=".$data['id_bagian']."&& no=".$data['no']."'>".$data['judul_isi'] ."</a></li>";
+                                        }
+                                    }
+                                ?>
+                            </ul>                            
+                    <?php }
+                    ?>
                 </div>
-                <div class="formDaftar">
-                    <h1>Pendaftaran</h1>
-                    <form class="form" method="POST">
-                        <div class="formlengkap">
-                            <p>Nama Lengkap</p>
-                            <input type="text" name="nama_lengkap">
-                        </div>
-                        <div class="formnama">
-                            <p>Nama Pengguna</p>
-                            <input type="text" name="username">
-                        </div>
-                        <div class="formEmail">
-                            <p>Email</p>
-                            <input type="text" name="email">
-                        </div>
-                        <div class="formPass">
-                            <p>Kata Sandi</p>
-                            <input type="password" name="pass">
-                        </div>
-                        <div class="checkbox">
-                            <input type="checkbox" name="checkbox" id="check"> 
-                            <p> Dengan mengklik ini maka saya setuju untuk mengikuti <span class="ketentuan">Ketentuan Pengguna</span>  serta <span class="ketentuan">Kebijakan Privasi</span> </p> 
-                        </div>
-                        <div class="submit">
-                            <input type="submit" value="DAFTAR" name="daftar">
-                        </div>
-                    </form>
-                    <p>Punya akun? Pergi ke <a href="Masuk.php">Masuk</a></p>
             </div>
             
+            <div class="content">
+                <?php
+                    $cari= "SELECT * FROM materi,isi_materi WHERE isi_materi.id_bagian= '$bagian' AND isi_materi.no= '$no' AND materi.id_materi=isi_materi.id_materi";
+                    $tampil=mysqli_query($koneksi,$cari);
+                    while ($data= mysqli_fetch_assoc($tampil)) {
+                ?>
+
+                <h1><?php echo $data['judul_isi'] ?></h1>
+                <img src="../img/<?php echo $data['gambar_materi'] ?>" alt="">
+    
+                <div class="isi-materi">
+                    <p><?php echo $data['isi_materi']; ?></p>
+                </div>
+
+                <div class="video">
+                    <?php echo $data['link_youtube']; ?>
+                </div>
+
+                <?php } ?>
             </div>
         </div>
+        
         <div class="container-footer">
             <div class="footer">
                 <div class="isi-footer">
@@ -109,26 +130,4 @@
         </div>
     </div>
 </body>
-<?php 
-    include "../db/koneksi.php";
-
-    if (isset($_POST['daftar'])) {
-        $nama_lengkap= $_POST['nama_lengkap'];
-        $username = $_POST['username'];
-        $email= $_POST['email'];
-        $pass= md5($_POST['pass']);
-        $tambah= mysqli_query($koneksi, "INSERT into masuk VALUES('$username','$nama_lengkap','$email','$pass')");
-        if ($tambah){
-            echo "<script>
-            alert('Data anda berhasil ditambahkan silahkan menuju halaman masuk');
-            window.location='masuk.php';
-            </script>";
-        }else {
-            echo "<script>
-            alert('Daftar Gagal');
-            window.location='daftar.php';
-            </script>";
-        }
-    }
-?>
 </html>

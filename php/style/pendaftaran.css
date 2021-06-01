@@ -86,7 +86,7 @@ h1{
     text-align: center; 
 }
 
-.submit button{
+.submit input{
     width: 100px;
     height: 30px;
     border-radius: 30px;

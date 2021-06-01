@@ -35,7 +35,9 @@ li{
     padding: 8px 15px;
     border-radius: 30px;
 }
-
+#keluar{
+    margin-top: -8px;
+}
 
 .navi li a{
     color:black;

@@ -89,11 +89,37 @@ p{
     color: black;
 }
 
+
 .logo-photoshop .iconify{
     width: 80px;
     height: 80px;
     margin-bottom: 20px;
-} 
+}
+.container-tutup{
+    display: flex;
+    position: absolute;
+    width: 250px;
+    height: 238px;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-tutup .iconify{
+    position: absolute;
+    z-index: 3;
+    width: 50px;
+    height: 50px;
+}
+
+.tutup{
+    position: absolute;
+    z-index: 2;
+    width: 250px;
+    height: 238px;
+    background-color: grey;
+    border-radius: 20px;
+    opacity: 70%;
+}
 /* SLIDER */
 .testimoni{
     height: 250px;

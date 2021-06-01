@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style/admin_database.css">
+    <link rel="stylesheet" href="style/navdatabase.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"> 
 </head>
 <body>
     <div class="container">
@@ -16,6 +19,7 @@
                 <ul>
                     <li id="akun"><a href="">Akun Pengguna</a></li>
                     <li><a href="">Materi</a></li>
+                    <li><a href="">Pesan</a></li>
                 </ul>
             </div>
         </div>

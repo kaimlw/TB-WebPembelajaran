@@ -1,25 +1,10 @@
 <!DOCTYPE html>
 <?php
 session_start();
-include "../db/koneksi.php"
-?>
-
-<?php
-if(isset($_POST['proseslog'])){
-    $sql = mysqli_query($koneksi, "SELECT * from masuk where email = '$_POST[email]'
-    and password = '$_POST[password]'");
-
-    $cek = mysqli_num_rows($sql);
-    if($cek > 0){
-        $_SESSION["nama"] = $_POST['nama'];
-
-        echo "<meta http-equiv=refresh content=0;URL='admin_database.php'>";
-    }else{
-        echo "<h2 align=center>Email atau Password anda Salah !</h2>";
-        echo "<meta http-equiv=refresh content=2;URL='Masuk.php'>";
-    }
+include "../db/koneksi.php";
+if (isset($_SESSION['email'])) {
+    header('location: Home.php');
 }
-
 ?>
 
 <html lang="en">
@@ -37,38 +22,46 @@ if(isset($_POST['proseslog'])){
         <div class="navbar">
             <ul class="nav">
                 <div class="logo-header">
-                    <li><a href="Home.html"><img src="../img/Logo2-5.png" alt=""></a></li>
+                    <li><a href="Home.php"><img src="../img/Logo2-5.png" alt=""></a></li>
                 </div>
                 <div class="navi">
-                    <li><a href="Materi.html">MATERI</a></li>
+                    <li><a href="#daftar-materi">MATERI</a></li>
                     <li><a href="About.html">TENTANG KAMI</a></li>
                     <li><a href="Kontak.html">KONTAK</a></li>
-                    <li id="masuk"><a href="Masuk.html">MASUK</a></li>
+                    <?php 
+                        if(isset($_SESSION['email'])){
+                            echo "<li id='keluar'><a href='logout.php'><span class='iconify' data-icon='ic:round-logout'></span>LOGOUT</a></li>";
+                        }
+                        else {
+                            echo"<li id='masuk'><a href='Masuk.php'>MASUK</a></li>";
+                        }
+                    ?>
                 </div>
             </ul>
-        </div> 
+        </div>
+        
         <div class="content">
             <div class="isi-content">
                 <div class="ilmasuk">
-                    <img src="../img/misi.jpg" alt="">
+                    <img src="../img/login.jpg" alt="">
                     <p>Berkarya di industri kreatif itu memang menyenangkan. Terlebih jika pesan visual yang kita sampaikan bisa menginspirasi banyak orang. Pastinya, Anda mau kan? Menjadi seorang yang ahli dalam bidang desain grafis?</p>
                 </div>
                 <div class="masuk">
                     <h1>Masuk</h1>
-                    <form action="" method="POST" class="form">
+                    <form method="POST" class="form">
                         <div class="formEmail">
                             <p>Email</p>
-                            <input type="text" name="nama">
+                            <input type="text" name="email">
                         </div>
                         <div class="formPass">
                             <p>Kata Sandi</p>
-                            <input type="Password" name="password">
+                            <input type="Password" name="pass">
                         </div>
                         <div class="submit">
-                            <input type="submit" value="MASUK" name="proseslog">
+                            <input type="submit" value="MASUK" name="login">
                         </div>
                     </form>
-                    <p>Belum punya akun? <a href="daftar.php" >Daftar Sekarang!</a></p>
+                    <p>Belum punya akun? <a href="pendaftaran.php" >Daftar Sekarang!</a></p>
                 </div>
             </div>
         </div>      
@@ -108,4 +101,25 @@ if(isset($_POST['proseslog'])){
         </div>
     </div>
 </body>
+<?php
+if(isset($_POST['login'])){
+    $email= $_POST['email'];
+    $username=$_POST['email'];
+    $pass= $_POST['pass'];
+
+    $sql = mysqli_query($koneksi, "SELECT * from masuk where email = '$email' and password = '$pass'");
+
+    $cek = mysqli_num_rows($sql);
+    if($cek > 0){
+        $data= mysqli_fetch_array($sql);
+        $_SESSION["email"] = $data['email'];
+
+        echo "<meta http-equiv=refresh content=0;URL='Home.php'>";
+    }else{
+        echo "<script> alert('Email atau Password anda salah!');</script>";
+        echo "<meta http-equiv=refresh content=2;URL='Masuk.php'>";
+    }
+}
+
+?>
 </html>
