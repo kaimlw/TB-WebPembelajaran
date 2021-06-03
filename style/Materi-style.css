@@ -6,7 +6,6 @@
 
 /* MAIN CONTENT */
 .container{
-    /* background-color: #feffde; */
     background-color: #91c788;
 
 }
@@ -70,6 +69,7 @@ p{
 }
 .main-Materi li{
     width: 800px;
+    margin-bottom: 5px;
 }
 .main-Materi a{
     text-decoration: none;

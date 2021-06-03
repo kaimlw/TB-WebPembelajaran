@@ -24,9 +24,9 @@
                     <li><a href="Home.php"><img src="../img/Logo2-5.png" alt=""></a></li>
                 </div>
                 <div class="navi">
-                    <li><a href="#daftar-materi">MATERI</a></li>
-                    <li><a href="About.html">TENTANG KAMI</a></li>
-                    <li><a href="Kontak.html">KONTAK</a></li>
+                    <li><a href="Home.php#daftar-materi">MATERI</a></li>
+                    <li><a href="About.php">TENTANG KAMI</a></li>
+                    <li><a href="Kontak.php">KONTAK</a></li>
                     <?php 
                         if(isset($_SESSION['email'])){
                             echo "<li id='keluar'><a href='logout.php'><span class='iconify' data-icon='ic:round-logout'></span>LOGOUT</a></li>";
@@ -75,7 +75,7 @@
             
             <div class="content">
                 <?php
-                    $cari= "SELECT * FROM materi,isi_materi WHERE isi_materi.id_bagian= '$bagian' AND isi_materi.no= '$no' AND materi.id_materi=isi_materi.id_materi";
+                    $cari= "SELECT * FROM isi_materi WHERE isi_materi.id_bagian= '$bagian' AND isi_materi.no= '$no' AND isi_materi.id_materi='$id'";
                     $tampil=mysqli_query($koneksi,$cari);
                     while ($data= mysqli_fetch_assoc($tampil)) {
                 ?>
@@ -100,19 +100,19 @@
                 <div class="isi-footer">
                     <div class="materi">
                         <h3>Materi</h3>
-                        <a href="photoshop">Photoshop</a>
-                        <a href="illustrator">Illustrator</a>
-                        <a href="figma">FIGMA</a>
+                        <a href="Materi.php?id_materi=P">Photoshop</a>
+                        <a href="Materi.php?id_materi=I">Illustrator</a>
+                        <a href="Materi.php?id_materi=F">FIGMA</a>
                     </div>
                     <div class="about">
                         <h3>Tentang Kami</h3>
-                        <a href="About us">About Us</a>
-                        <a href="Testimonial">Testimonial</a>
+                        <a href="About.php">About Us</a>
+                        <a href="Home.php#testi">Testimonial</a>
                     </div>
                     <div class="kontak">
                         <h3>Hubungi Kami</h3>
-                        <a href="email">Email</a>
-                        <a href="telepon">Telepon</a>
+                        <a href="Kontak.php">Email</a>
+                        <a href="Kontak.php">Telepon</a>
                     </div>
                     <div class="media">
                         <h3>Sosial Media</h3>
@@ -124,7 +124,7 @@
                     </div> 
                 </div>
                 <div class="logo-footer">
-                    <a href=""><img src="../img/Logo2-5.png" alt=""></a>
+                    <a href="Home.php"><img src="../img/Logo2-5.png" alt=""></a>
                 </div>   
             </div>
         </div>
