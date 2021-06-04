@@ -53,3 +53,27 @@ li{
 }
 
 
+/* RESPONSIVE */
+@media screen and (max-width:768px ){
+    .logo-header{
+        margin-right: 10%;
+        margin-left: 50px ;
+    }
+}
+
+@media screen and (max-width:450px ){
+    .navbar{
+        height: 65px;
+    }
+    .logo-header{
+        margin-right: 3%;
+        margin-left: 20px;
+    }
+    li{
+        font-size: 10px;
+    }
+    .logo-header img{
+        width: 50px;
+        height: 35px;
+    }
+}   

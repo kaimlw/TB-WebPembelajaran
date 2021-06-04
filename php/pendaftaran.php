@@ -40,7 +40,7 @@
             <div class="isi-content">
                 <div class="illdaftar">
                     <img src="../img/login.jpg" alt="">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, a sed possimus dolorem non consequuntur quia consectetur eos repellat rem repudiandae eius aliquid id ea magnam dolores explicabo quasi. Accusamus.</p>
+                    <p>Berkarya di industri kreatif itu memang menyenangkan. Terlebih jika pesan visual yang kita sampaikan bisa menginspirasi banyak orang. Pastinya, Anda mau kan? Menjadi seorang yang ahli dalam bidang desain grafis?</p>
                 </div>
                 <div class="formDaftar">
                     <h1>Pendaftaran</h1>
