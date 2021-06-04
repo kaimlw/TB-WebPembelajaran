@@ -1,55 +1,26 @@
 <!DOCTYPE html>
-<?php 
-include ('../db/koneksi.php');
-$statusMsg = '';
-$msgClass = '';
-if(isset($_POST['submit'])){
-    // Get the submitted form data
-    $email = $_POST['email'];
-    $nama = $_POST['nama'];
-    $nomor = $_POST['nomor'];
-    $pesan = $_POST['message'];
-    
-    // Cek apakah ada data yang belum diisi
-    if(!empty($email) && !empty($nama) && !empty($nomor) && !empty($pesan)){
-        
-        if(filter_var($email, FILTER_VALIDATE_EMAIL) === false){
-            $statusMsg = 'Please enter your valid email.';
-            $msgClassk = 'errordiv';
-        }else{
-            // Pengaturan penerima email dan subjek email
-            $toEmail = 'arkthe40@gmail.com'; // Ganti dengan alamat email yang Anda inginkan
-            $emailSubject = 'kontak dari '.$nama;
-            $htmlContent = '<h2> via Form Kontak US</h2>
-                <h4>nama</h4><p>'.$nama.'</p>
-                <h4>Email</h4><p>'.$email.'</p>
-                <h4>Sub</h4><p>'.$nomor.'</p>
-                <h4>Message</h4><p>'.$pesan.'</p>';
-            
-            // Mengatur Content-Type header untuk mengirim email dalam bentuk HTML
-            $headers = "MIME-Version: 1.0" . "\r\n";
-            $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-            
-            // Header tambahan
-            $headers .= 'From: '.$nama.'<'.$email.'>'. "\r\n";
-            
-            // Send email
-            if(mail($toEmail,$emailSubject,$htmlContent,$headers)){
-                $statusMsg = 'Pesan Anda sudah terkirim dengan sukses !';
-                $msgClass = 'succdiv';
-            }else{
-                $statusMsg = 'Maaf pesan Anda gagal terkirim, silahkan ulangi lagi.';
-                $msgClass = 'errordiv';
-            }
-        }
-    }else{
-        $statusMsg = 'Harap mengisi semua field data';
-        $msgClass = 'errordiv';
-    }
-}
+<?php
+    include ('../db/koneksi.php');
 
-?>
-<!DOCTYPE html>
+    if (isset($_POST['kirim'])) {
+        $nama= $_POST['nama'];
+        $email = $_POST['email'];
+        $no_hp= $_POST['no_hp'];
+        $pesan= $_POST['isi-pesan'];
+        $tambah= mysqli_query($koneksi, "INSERT into pesan VALUES('$nama','$email','$no_hp','$pesan')");
+        if ($tambah){
+            echo "<script>
+            alert('Pesan anda berhasil terkirim');
+            window.location='Kontak1.php';
+            </script>";
+        }else {
+            echo "<script>
+            alert('Pesan anda gagal terkirim');
+            window.location='Kontak1.php';
+            </script>";
+        }
+    }
+?>            
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -89,36 +60,40 @@ if(isset($_POST['submit'])){
             </ul>
         </div>
         <div class="content">
-            <div class="kontak">
+            <div class="teks">
                 <h1>Kontak Kami</h1>
-                <p>Apabila terdapat pertanyaan mengenai kami atau kerjasama dan hal lainnya, hubungi kami melalui</p>
+                <br>
+                <p><b>Apabila terdapat pertanyaan mengenai kami<br> atau kerjasama dan hal lainnya, hubungi kami<br> melalui</b></p>
+                <br>
                 <div class="email">
                     <span class="iconify" data-icon="line-md:email-twotone"></span>
-                    <p>costumer.service@gmail.com</p>
+                    <p><b>costumer.service@gmail.com</b></p>
                 </div>
+                <br>
                 <div class="telepon">
-                    <img src="logo telepon" alt="">
-                    <p>087812314323</p>
+                    <span class="iconify" data-icon="akar-icons:phone" data-inline="false"></span>
+                    <p><b>087812314323</b></p>
                 </div>
-                <p>atau isi formulir di samping</p>
+                <br>
+                <p><b>atau isi formulir di samping</b></p>
             </div>
             <div class="pesan">
                 <form method="POST" class="form">
-                    <h3>PESAN</h3>
+                    <h3><b>PESAN</b></h3>
                     <div class="formnama">
-                        <p>Nama Lengkap</p>
+                        <p><b>Nama Lengkap</b></p>
                         <input type="text" name="nama">
                     </div>
                     <div class="formemail">
-                        <p>Email</p>
+                        <p><b>Email</b></p>
                         <input type="text" name="email">
                     </div>
                     <div class="formtel">
-                        <p>No. Telepon</p>
-                        <input type="text" name="pass">
+                        <p><b>No. Telepon</b></p>
+                        <input type="text" name="no_hp">
                     </div>
                     <div class="formPesan">
-                        <p>Pesan</p>
+                        <p><b>Pesan</b></p>
                         <textarea name="isi-pesan" id="isi-pesan" cols="30" rows="10"></textarea>
                     </div>
                     <div class="submit">
@@ -126,7 +101,6 @@ if(isset($_POST['submit'])){
                     </div>
                 </form>
             </div>
-            
         </div>
         
         <div class="container-footer">
@@ -165,4 +139,5 @@ if(isset($_POST['submit'])){
     </div>        
 </div>
 </body>
+
 </html>

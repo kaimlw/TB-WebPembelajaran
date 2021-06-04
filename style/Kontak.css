@@ -14,16 +14,33 @@
     width: 100%;
     height: 545px;
 }
-.kontak{
+.teks{
     width: 50%;
-    display: flex;
-    justify-content: center;
-    padding-left: 50px;
+    padding-left: 225px;
+    padding-top: 50px;
+}
+.teks h1{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 600px;
+}
+p{
+    text-align: justify;
+    font-family: 'Noto Sans JP',sans-serif;
+}
+h3{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 600px;  
 }
 .email{
     display: flex;
 }
 .email .iconify{
+    margin-right: 10px;
+}
+.telepon{
+    display: flex;
+}
+.telepon .iconify{
     margin-right: 10px;
 }
 .pesan{
