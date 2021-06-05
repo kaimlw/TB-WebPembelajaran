@@ -111,8 +111,7 @@
                     </div>
                     <div class="kontak">
                         <h3>Hubungi Kami</h3>
-                        <a href="Kontak.php">Email</a>
-                        <a href="Kontak.php">Telepon</a>
+                        <a href="Kontak.php">Kontak</a>
                     </div>
                     <div class="media">
                         <h3>Sosial Media</h3>

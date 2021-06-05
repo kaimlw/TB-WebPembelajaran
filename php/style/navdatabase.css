@@ -19,7 +19,7 @@ a{
 .pilihan li{
     display: block;
     list-style: none;
-    padding: 7px;
+    padding-left: 10px;
     width: 217px;
     height: 35px;
     margin-bottom: 10px;
@@ -38,7 +38,20 @@ a{
     height: 71px;
     margin-bottom: 50px;
 }
-
+.isi-nav{
+    display: flex;
+    width: 217px;
+    height: 35px;
+    align-items: center;
+}
+.isi-nav .iconify{
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+}
 .pilihan li:hover{
+    background-color: green;
+}
+#aktif{
     background-color: green;
 }

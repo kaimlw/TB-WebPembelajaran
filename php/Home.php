@@ -41,11 +41,11 @@
         
         <div class="main-content-1">
             <div class="com">
-                <h1>Company Tagline</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, est. Obcaecati accusantium pariatur dolorem repudiandae eligendi facilis nam iste cupiditate eos laborum esse soluta sunt fugiat placeat ipsum, dolorum harum.</p>
+                <h1>Design Your Future Career Here!</h1>
+                <p>Dapatkan beragam materi yang dapat membantu anda menjadi mahir menggunakan aplikasi desain. Tak perlu biaya, anda dapat menikmati semuanya!</p>
             </div>
             <div class="ilustrasi">
-                <img src="../img/logo1.png" alt="">
+                <img src="../img/home-2.png" alt="">
             </div>
         </div>
         <div class="content" id="daftar-materi">
@@ -134,7 +134,7 @@
                 
             </div>
         </div>
-        <div class="testimoni" id="testi">
+        <div class="testimoni">
             <h1>Testimoni</h1>
             <div class="slider">
                 <div class="slides">
@@ -147,20 +147,40 @@
 
                     <!-- Slide Content Start -->
                     <div class="slide first">
-                        <img src="../img/logo1.png" alt="">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur qui optio et dicta voluptates vero delectus ut quam fugiat. Beatae excepturi deserunt quas facilis accusamus reiciendis, vel assumenda molestias culpa.</p>
+                        <div class="foto">
+                            <img src="../img/testi-1.png" alt="">
+                        </div>
+                        <div class="testi">
+                            <p class="kalimat">" Web yang keren banget! Baru 3 menit belajar udah ngerti semuanya! "</p>
+                            <p class="nama">~ Ahmad Kunad</p>
+                        </div>
                     </div>
                     <div class="slide">
-                        <img src="../img/logo1.png" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptatem impedit quasi qui, delectus omnis tenetur quae ullam, eaque vel quibusdam hic quia nihil molestias consequatur earum fuga quam praesentium?</p>
+                        <div class="foto">
+                            <img src="../img/testi-2.png" alt="">
+                        </div>
+                        <div class="testi">
+                            <p class="kalimat">" Saya kira web apaan, ternyata buat belajar aplikasi desain. Bagus lah. "</p>
+                            <p class="nama">~ Asep Anggut </p>
+                        </div>
                     </div>
                     <div class="slide">
-                        <img src="../img/logo1.png" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae velit veniam neque nam, odit quo eos, commodi eius nostrum non saepe incidunt soluta, quisquam sit officiis. Sunt asperiores nobis odio.</p>
+                        <div class="foto">
+                            <img src="../img/testi-3.png" alt="">
+                        </div>
+                        <div class="testi">
+                            <p class="kalimat">" Setelah belajar dari sini, saya mengerti makna kehidupan "</p>
+                            <p class="nama">~ Ridwan Senja</p>
+                        </div>
                     </div>
                     <div class="slide">
-                        <img src="../img/logo1.png" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae velit veniam neque nam, odit quo eos, commodi eius nostrum non saepe incidunt soluta, quisquam sit officiis. Sunt asperiores nobis odio.</p>
+                        <div class="foto">
+                            <img src="../img/testi-4.png" alt="">
+                        </div>
+                        <div class="testi">
+                            <p class="kalimat">" Apakah muka saya terlihat kecewa dengan website ini? "</p>
+                            <p class="nama">~ Husni Hepi</p>
+                        </div>
                     </div>
                     <!-- Slide Content End -->
 
@@ -199,8 +219,7 @@
                     </div>
                     <div class="kontak">
                         <h3>Hubungi Kami</h3>
-                        <a href="Kontak.php">Email</a>
-                        <a href="Kontak.php">Telepon</a>
+                        <a href="Kontak.php">Kontak</a>
                     </div>
                     <div class="media">
                         <h3>Sosial Media</h3>

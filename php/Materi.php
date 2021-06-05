@@ -44,7 +44,7 @@ session_start();
         <?php
             $id = $_GET['id_materi'];
 
-            $cari= "SELECT * FROM materi,isi_materi WHERE materi.id_materi = '$id' AND materi.id_materi=isi_materi.id_materi";
+            $cari= "SELECT * FROM materi WHERE materi.id_materi = '$id'";
             $tampil = mysqli_query($koneksi,$cari);
             while ($data= mysqli_fetch_assoc($tampil)) {
         ?>
@@ -57,13 +57,16 @@ session_start();
                 <p><?php echo $data['deskripsi_materi'] ?></p>
             </div>    
         </div>
-
+        <?php
+            }
+        ?>
+        
         <div class="daftarMateri">
             <h3>DAFTAR MATERI</h3>
             <div class="accordion">
                     <?php 
+                    $cari= "SELECT * FROM materi,isi_materi WHERE materi.id_materi = '$id' AND materi.id_materi=isi_materi.id_materi";
                     $tampil=mysqli_query($koneksi,$cari);
-                    
                     while ($data=mysqli_fetch_assoc($tampil)) {
                         $bagian=$data['id_bagian'];
                     ?>
@@ -105,9 +108,7 @@ session_start();
 
 
 
-<?php
-            }
-        ?>
+
         </div>
        
         <div class="container-footer">
@@ -126,8 +127,7 @@ session_start();
                     </div>
                     <div class="kontak">
                         <h3>Hubungi Kami</h3>
-                        <a href="Kontak.php">Email</a>
-                        <a href="Kontak.php">Telepon</a>
+                        <a href="Kontak.php">Kontak</a>
                     </div>
                     <div class="media">
                         <h3>Sosial Media</h3>

@@ -82,8 +82,7 @@ if (isset($_SESSION['email'])) {
                     </div>
                     <div class="kontak">
                         <h3>Hubungi Kami</h3>
-                        <a href="Kontak.php">Email</a>
-                        <a href="Kontak.php">Telepon</a>
+                        <a href="Kontak.php">Kontak</a>
                     </div>
                     <div class="media">
                         <h3>Sosial Media</h3>
@@ -104,7 +103,6 @@ if (isset($_SESSION['email'])) {
 <?php
 if(isset($_POST['login'])){
     $email= $_POST['email'];
-    $username=$_POST['email'];
     $pass= $_POST['pass'];
 
     $sql = mysqli_query($koneksi, "SELECT * from masuk where email = '$email' and password = '$pass'");

@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    background-color: rgb(231, 227, 227);
+}
+.content{
+    padding: 10px 10px 10px 20px;
+    
+}
+.content h1{
+    display: block;
+    border-bottom: 1px solid black;
+    width: 987px;
+    font-family: 'Roboto';
+}
+.label h4{
+    font-family: 'Roboto';
+}
+.content p{
+    font-family: 'Noto Sans JP';
+    font-size: 14px;
+}
+
+.accordion{
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.main-pesan{
+    position: relative;
+    margin: 10px 20px;
+}
+
+.main-pesan p{
+    width: 800px;
+}
+
+.accordion .main-pesan .label{
+    display: flex;
+    position: relative;
+    font-family: 'Roboto';
+    font-size: 14px;
+    padding: 10px;
+    background:#29bb89 ;
+    color: white;
+    cursor: pointer;
+}
+.hapus{
+    position: absolute;
+    top: 50%;
+    right:60px;
+    transform: translateY(-50%);
+}
+.hapus .iconify{
+    width: 1.5em;
+    height: 1.5em;
+    color: black;
+}
+.label h4:first-child{
+    margin-bottom: 10px;
+}
+
+.accordion .main-pesan .label::before{
+    content: url('https://api.iconify.design/akar-icons:chevron-down.svg?height=24');
+    vertical-align: -0.125em;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+}
+
+.accordion .main-pesan.active .label::before{
+    content: url('https://api.iconify.design/akar-icons:chevron-up.svg?height=24');
+    vertical-align: -0.125em;;
+}
+
+.accordion .main-pesan .content{
+    position: relative;
+    background: white;
+    padding: 0 15px;
+    height: 0;
+    overflow: hidden;
+    transition: 0.2s;
+    overflow-y: auto;
+    box-shadow: 0px 0px 20px gray;
+}
+
+.accordion .main-pesan.main-pesan.active .content{
+    height: max-content;
+    padding: 10px;
+}

@@ -90,8 +90,7 @@
                     </div>
                     <div class="kontak">
                         <h3>Hubungi Kami</h3>
-                        <a href="Kontak.php">Email</a>
-                        <a href="Kontak.php">Telepon</a>
+                        <a href="Kontak.php">Kontak</a>
                     </div>
                     <div class="media">
                         <h3>Sosial Media</h3>
@@ -116,19 +115,34 @@
         $nama_lengkap= $_POST['nama_lengkap'];
         $username = $_POST['username'];
         $email= $_POST['email'];
-        $pass= md5($_POST['pass']);
-        $tambah= mysqli_query($koneksi, "INSERT into masuk VALUES('$username','$nama_lengkap','$email','$pass')");
-        if ($tambah){
-            echo "<script>
-            alert('Data anda berhasil ditambahkan silahkan menuju halaman masuk');
-            window.location='masuk.php';
-            </script>";
+        $pass= $_POST['pass'];
+        
+        if (!empty($email) && !empty($nama_lengkap) && !empty($username) && !empty($pass)) {
+            if (isset($_POST['checkbox'])=== false) {
+                echo "<script> alert ('Anda belum menyetujui Ketentuan dan Kebijakan kami')</script>";
+            }else {
+                if (filter_var($email, FILTER_VALIDATE_EMAIL) === false){
+                    echo "<script>alert ('Email yang anda masukkan tidak valid')</script>";
+                }else {
+                    $tambah= mysqli_query($koneksi, "INSERT into masuk VALUES('$username','$nama_lengkap','$email','$pass')");
+                    if ($tambah){
+                        echo "<script>
+                        alert('Data anda berhasil ditambahkan silahkan menuju halaman masuk');
+                        window.location='masuk.php';
+                        </script>";
+                    }else {
+                        echo "<script>
+                        alert('Daftar Gagal');
+                        window.location='daftar.php';
+                        </script>";
+                    }   
+                }
+            }    
         }else {
-            echo "<script>
-            alert('Daftar Gagal');
-            window.location='daftar.php';
-            </script>";
+            echo "<script>alert ('Harap mengisi semua form yang ada')</script>";
         }
+        
+        
     }
 ?>
 </html>

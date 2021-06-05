@@ -8,12 +8,6 @@
     display: flex;
 }
 
-#akun{
-    background: green;
-}
-
-
-
 .content{
     background: whitesmoke;
     width: 83%;
@@ -22,16 +16,44 @@
 }
 h1{
     margin-bottom: 10px;
+    font-family: 'Roboto';
 }
 
 table,tr,th,td{
     border: 1px solid black;
     border-collapse: collapse;
-    padding: 5px;
+    padding: 10px 40px;
     margin-top: 10px;
+    font-family: 'Noto Sans JP';
+    font-size: 14px;
+    
 }
 
 th{
-    background-color:darkgray;
+    background-color:#29bb89;
+    color: white;
 }
 
+.hapus{
+    background-color: #29bb89;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    border-radius: 20px;
+}
+.hapus a{
+    text-decoration: none;
+    color: white;
+}
+
+.isihapus{
+    display: flex;
+    width: 100px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+}
+.isihapus .iconify{
+    width: 20px;
+    height: 20px;
+}
