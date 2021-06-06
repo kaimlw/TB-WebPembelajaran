@@ -114,3 +114,61 @@ p{
     height: max-content; 
     padding: 10px;
 }
+
+@media screen and (max-width:768px) {
+    .main-content{
+        justify-content: space-evenly;
+    }
+    .illmateri img{
+        width: 200px;
+        height: 200px;
+    }
+    /* ACCORDION */
+    .daftarMateri{
+        width: 625px;
+    }
+    .accordion {
+        max-width: 580px;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .main-content{
+        flex-direction: column;
+    }
+    .illmateri{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-left: 0;
+    }
+    .illmateri img{
+        width: 100px;
+        height: 100px;
+    }
+    .judulMateri{
+        width: 100%;
+        margin-left: 0;
+        padding: 30px;
+        margin-top: -80px;
+    }
+    .judulMateri p{
+        font-size: 12px ;
+    }
+    .judulMateri h1{
+        font-size: 26px;
+    }
+    /* ACCORDION */
+    .daftarMateri{
+        width: 355px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 5px;
+    }
+    .accordion{
+        width: 290px;
+    }
+    .label{
+        font-size: 16px;
+    }
+}

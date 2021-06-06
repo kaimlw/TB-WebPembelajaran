@@ -67,3 +67,41 @@
     height: 64px;
 }
 
+@media screen and (max-width: 768px) {
+    .isi-footer{
+        width: 65%;
+    }
+    .logo-footer{
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .footer{
+        flex-direction: column;
+    }
+    .isi-footer{
+        width: 100%;
+    }
+    .logo-footer{
+        width: 100%;
+        padding-right: 20px;
+    }
+    h3{
+        font-size: 14px;
+    }
+    .isi-footer a{
+        font-size: 10px;
+    }
+    .logo-footer img{
+        width: 60px;
+        height: 42px;
+    }
+    .icon a{
+        margin-right: 5px;
+    }
+    .iconify{
+        width: 15px;
+        height: 15px;
+    }
+}

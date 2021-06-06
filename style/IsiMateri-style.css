@@ -67,3 +67,60 @@
 .content .video{
     margin: 0 15%;
 }
+@media screen and (max-width:768px) {
+    .navigation{
+        width: 20%
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 80%;
+    }
+    .content h1{
+        margin-left: -100px;
+    }
+    .content img{
+        width: 300px ;
+        height: 150px;
+    }
+    .isi-materi{
+        width: 80%;
+    }
+    .content .video{
+        margin: 0;
+    }
+    iframe{
+        width: 463px;
+        height: 263px;
+
+    }
+}
+
+@media screen and (max-width:450px) {
+    .navigation{
+        padding-left: 10px;
+    }
+    .navigation h3{
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    .pilihan li {
+        font-size: 10px;
+    }
+    .content img{
+        width: 200px;
+        height: 100px;
+    }
+    .content p{
+        font-size: 10px;
+    }
+    .content h1{
+        font-size: 20px;
+        margin-left: -40px;
+    }
+    iframe{
+        width: 250px;
+        height: 142px;
+    }
+}

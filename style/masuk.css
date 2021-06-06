@@ -12,7 +12,8 @@ p{
 }
 .content{
     width: 100%;
-    height: 545px;
+    height: 100%;
+    padding: 4% 0;
     display: flex;
     align-items: center;
     justify-content: center
@@ -20,7 +21,7 @@ p{
 .isi-content{
     display: flex;
     justify-content: center;
-    height: 450px;
+    height: max-content;
     width: 80%;
     background-color: #29bb89;
     border: 2px solid white;
@@ -81,4 +82,30 @@ p{
 .masuk a{
     text-decoration: none;
     color: white;
+}
+
+@media screen and (max-width:768px) {
+    .ilmasuk img {
+        width: 250px;
+        height: 179px;
+        margin-bottom: 0;
+    }
+    .ilmasuk p{
+        font-size: 13px;
+    }
+}
+@media screen and (max-width:450px) {
+    .isi-content{
+        flex-direction: column;
+    }
+    .ilmasuk{
+        width: 100%;
+    }
+    .ilmasuk img{
+        width: 150px;
+        height: 107px;
+    }
+    .masuk{
+        width: 100%;
+    }
 }
